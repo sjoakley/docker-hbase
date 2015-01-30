@@ -7,3 +7,17 @@ MAINTAINER Stephen Oakley
 
 # Add the new install cluster script.
 ADD install-cluster.sh /tmp/
+
+# Expose the Ambari ports
+# Ambari Master UI
+EXPOSE 8080
+
+# Expose HBase ports
+# HMaster
+EXPOSE 60000
+# HMaster UI
+EXPOSE 60010
+# Region Server
+EXPOSE 60020
+# Region Server Region UI
+EXPOSE 60030
